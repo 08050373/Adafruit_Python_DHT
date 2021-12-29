@@ -23,6 +23,14 @@ import sys
 
 import Adafruit_DHT
 
+import requests
+
+token = ''
+message = '現在溫度21度'
+headers = {
+  "Authorization": "Bearer " + token,
+}
+payload = {'message': message }
 
 # Parse command line parameters.
 sensor_args = { '11': Adafruit_DHT.DHT11,
